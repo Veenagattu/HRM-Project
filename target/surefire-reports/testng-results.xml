@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="17774" started-at="2020-04-29T14:50:58Z" finished-at="2020-04-29T14:51:16Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="17774" started-at="2020-04-29T14:50:58Z" finished-at="2020-04-29T14:51:16Z">
+      <class name="com.Testrunner.Testexecution">
+        <test-method status="PASS" signature="executionwindow()[pri:0, instance:com.Testrunner.Testexecution@735f7ae5]" name="executionwindow" duration-ms="17750" started-at="2020-04-29T14:50:58Z" finished-at="2020-04-29T14:51:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- executionwindow -->
+      </class> <!-- com.Testrunner.Testexecution -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
