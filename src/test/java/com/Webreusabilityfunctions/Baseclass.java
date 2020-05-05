@@ -1,7 +1,13 @@
 package com.Webreusabilityfunctions;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -63,14 +69,21 @@ public class Baseclass {
 		sel.selectByVisibleText(optionvalue);
 	}
 	
-	public void Takescreenshot(WebElement E1)
+	public String Getcelldata(String sheetname, int rownum, int colnum) throws IOException
 	{
-		Actions act = new Actions(driver);
-		act.moveToElement(E1).build().perform();
+		File f = new File("C:\\Users\\Ravi\\eclipse-workspace\\HRM_Project\\ExcelData\\testdata.xlsx");
+		FileInputStream fis = new FileInputStream(f);
+		XSSFWorkbook wb = new XSSFWorkbook(fis);
+		XSSFSheet xs = wb.getSheet(sheetname);
+		int activerows=xs.getLastRowNum();
+		System.out.println("active rows"+activerows);
+		int activecol=xs.getRow(0).getLastCellNum();
+		System.out.println("active columns"+activecol);
+		String cellvalue=xs.getRow(rownum).getCell(colnum).getStringCellValue();
+		System.out.println("cellvalue"+cellvalue);
+		return cellvalue;
 	}
-	public void Datetime()
-	{
-		
-	}
+	
+
 }
 

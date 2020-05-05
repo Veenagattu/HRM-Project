@@ -5,7 +5,9 @@
     <classes>
       <class name="com.Testrunner.Testexecution">
         <methods>
+          <include name="attachscreenshotintoreport"/>
           <include name="executionwindow"/>
+          <include name="gethtmlreport"/>
         </methods>
       </class> <!-- com.Testrunner.Testexecution -->
     </classes>

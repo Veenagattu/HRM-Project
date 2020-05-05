@@ -12,8 +12,10 @@ public class TestCaseImplementation extends UtilityClass{
 	public void tc_01_Login_Valid_data() throws IOException
 	{
 		HRMWebpage lpo=PageFactory.initElements(driver, HRMWebpage.class);
-		lpo.username.sendKeys("user03");
-		lpo.pwd.sendKeys("pass1234");
+		String username = Getcelldata("cred",1,0);
+		lpo.username.sendKeys(username);
+		String password = Getcelldata("cred",1,1);
+		lpo.pwd.sendKeys(password);
 		lpo.loginbtn.click();
 		Getscreenshot();
 	}
